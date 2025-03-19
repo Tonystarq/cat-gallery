@@ -14,14 +14,16 @@ const BreedFilter = ({ onSelectBreed }) => {
     }, []);
 
     return (
-        <select onChange={(e) => onSelectBreed(e.target.value)}>
-            <option value="">All Breeds</option>
-            {breeds.map(breed => (
-                <option key={breed.id} value={breed.id}>
-                    {breed.name}
-                </option>
-            ))}
-        </select>
+        <div className="breed-filter">
+            <select onChange={(e) => onSelectBreed(e.target.value)}>
+                <option value="">All Breeds</option>
+                {breeds.map(breed => (
+                    <option key={breed.id} value={breed.id}>
+                        {breed.name}
+                    </option>
+                ))}
+            </select>
+        </div>
     );
 };
 
